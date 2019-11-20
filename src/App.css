@@ -1,22 +1,151 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  height: 100px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.name {
+  margin-left: 25px;
+  color: #FEC403;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 27px;
+}
+
+#button-container {
+  display: flex;
+  width: 20vw;
+  align-content: center;
+  margin-right: 20px; 
+  justify-content: space-between;
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+
+
+
+
+.word-container {
+  height: calc(100vh - 50px);  width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+
+.welcome {
+  color: white;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 45px;
+}
+.meet {
+  color: white;
+  font-size: 75px;
+  font-weight: bold;
+}
+
+.yellow-box {
+  height: 50px;
+  background-color: #FEC403;
+}
+
+.tell {
+  height: 50px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  align-items: center;}
+
+#hamburger-icon {
+  margin-right: 20px;
+  color: white;
+}
+
+.dropdown {
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 50px;
+  right: 0;
+  background-color: black;
+  color: black;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  border-bottom-left-radius: 8px;
+}
+
+.hide-animation {
+  animation-name: hide;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.show-animation {
+  animation-name: show;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards
+}
+
+@keyframes hide {
+  0% {
+    height: 100px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+@keyframes show {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  #button-container {
+    display: none;
+  }
+
+  body{
+    background-image: url('https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 990px) {
+  #button-container {
+    display: none;
+  }
+  nav, .dropdown{
+    color: white
+
+  }
+  body{
+    background-image: url('https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+}
+@media (min-width: 990px)  {
+  #hamburger-icon, .dropdown {
+    display: none;
+  }
+  body{
+    background-image: url('https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 }
